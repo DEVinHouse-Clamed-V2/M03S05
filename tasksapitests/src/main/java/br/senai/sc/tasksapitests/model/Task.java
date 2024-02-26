@@ -59,28 +59,64 @@ public class Task {
         this.person = person;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getGuid() {
         return guid;
+    }
+
+    public void setGuid(String guid) {
+        this.guid = guid;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public TaskStatusEnum getStatus() {
         return status;
     }
 
+    public void setStatus(TaskStatusEnum status) {
+        this.status = status;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
     public LocalDateTime getFinishedAt() {
         return finishedAt;
+    }
+
+    public void setFinishedAt(LocalDateTime finishedAt) {
+        this.finishedAt = finishedAt;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
     }
 
     public void setDeleted(boolean deleted) {
@@ -91,7 +127,15 @@ public class Task {
         return person;
     }
 
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     public Set<Person> getAssignees() {
         return assignees;
+    }
+
+    public void setAssignees(Set<Person> assignees) {
+        this.assignees = assignees;
     }
 }

@@ -41,7 +41,6 @@ public class TaskService {
     @Transactional
     public void delete(String id) throws TaskNotFoundException {
         Task task = getTask(id);
-
         task.setDeleted(true);
     }
 

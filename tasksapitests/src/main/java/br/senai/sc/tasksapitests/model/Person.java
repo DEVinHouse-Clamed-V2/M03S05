@@ -40,6 +40,7 @@ public class Person implements UserDetails {
         this.guid = UUID.randomUUID().toString();
         this.name = form.name();
         this.email = form.email();
+        this.address = new ResidenceAddress(form.residenceAddress());
         this.password = password;
     }
 

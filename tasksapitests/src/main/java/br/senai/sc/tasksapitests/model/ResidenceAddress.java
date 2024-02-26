@@ -1,5 +1,6 @@
 package br.senai.sc.tasksapitests.model;
 
+import br.senai.sc.tasksapitests.model.transport.operations.create.CreateResidenceAddressForm;
 import jakarta.persistence.*;
 
 @Entity
@@ -29,4 +30,17 @@ public class ResidenceAddress {
 
     private String complement;
 
+    public ResidenceAddress() {
+
+    }
+
+    public ResidenceAddress(CreateResidenceAddressForm form) {
+        this.street = form.street();
+        this.number = form.number();
+        this.district = form.district();
+        this.city = form.city();
+        this.state = form.state();
+        this.country = form.coutry();
+        this.complement = form.complement();
+    }
 }
